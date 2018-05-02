@@ -6,34 +6,44 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <!-- <h1>Starting a trip</h1> -->
-  <!-- <h2>Destination</h2> -->
+  <div class="destination">
+    <ion-item>
+      <ion-label stacked float-left>Destination</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <button ion-button>
+      <ion-icon name="help-circle"></ion-icon>
+    </button>
+  </div>
+  <div class="recipient">
+    <ion-item>
+      <ion-label stacked>Recipient</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <button ion-button>
+      <ion-icon name="help-circle"></ion-icon>
+    </button>
+  </div>
+  <div class="message">
   <ion-item>
-    <ion-label floating>Destination</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label stacked>ETA Message</ion-label>
+    <ion-textarea type="text"></ion-textarea>
   </ion-item>
+  <button ion-button>
+    <ion-icon name="help-circle"></ion-icon>
+  </button>
+</div>
+  Send when
   <ion-item>
-    <ion-label floating>Recipient</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
   </ion-item>
-  <ion-item>
-    <ion-label floating>ETA Message</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Message</ion-label>
-    <ion-toggle enabled checked="true"></ion-toggle>
-  </ion-item>
-
-<ion-item>
-  <ion-label>Time</ion-label>
-  <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
-</ion-item>
-
-<button ion-button float-left color="danger">Cancel</button>
-
-<button ion-button float-right color="energized">Start</button>
-
+  minutes away
+  <button ion-button float-left color="cancel">Cancel</button>
+  <button ion-button float-right color="affirm">Start</button>
 </ion-content>
 
-
+<!-- To Do (5/1)
+ - Make ion-input and help-circle on same line
+ - connect input to start button
+ - make destination searchable
+ -->
