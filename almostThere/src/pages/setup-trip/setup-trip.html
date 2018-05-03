@@ -8,13 +8,13 @@
 <ion-content padding>
   <div class="coupling">
     <div class="field">
-      <ion-item float-left>
+      <ion-item>
         <ion-label stacked>Destination</ion-label>
         <ion-input type="search"></ion-input>
       </ion-item>
     </div>
     <div class="help">
-      <button ion-button float-left>
+      <button ion-button small>
         <ion-icon name="help-circle"></ion-icon>
       </button>
     </div>
@@ -27,7 +27,7 @@
       </ion-item>
     </div>
     <div class="help">
-      <button ion-button>
+      <button ion-button small>
         <ion-icon name="help-circle"></ion-icon>
       </button>
     </div>
@@ -40,23 +40,24 @@
       </ion-item>
     </div>
     <div class="help">
-      <button ion-button>
+      <button ion-button small>
         <ion-icon name="help-circle"></ion-icon>
       </button>
     </div>
   </div>
-
-  
-  Send when
-  <ion-item>
-    <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
-  </ion-item>
-  minutes away
-  <button ion-button float-left navPop color="cancel">Cancel</button>
-  <button ion-button float-right color="affirm">Start</button>
+  <div class="time">
+    <p>Send when</p>
+    <ion-item>
+      <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <p>minutes away</p>
+  </div>
+  <div id="buttons">
+    <button ion-button float-left navPop color="cancel">Cancel</button>
+    <button ion-button float-right color="affirm">Start</button>
+  </div>
 </ion-content>
-<!-- To Do (5/1)
- - Make ion-input and help-circle on same line
+<!-- To Do (5/3)
  - connect input to start button
  - make destination searchable
  -->
