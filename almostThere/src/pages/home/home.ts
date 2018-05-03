@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SetupTripPage } from '../setup-trip/setup-trip';
 import { AddContactPage } from '../add-contact/add-contact';
+import { DefaultSettingPage } from '../default-setting/default-setting';
 import { ModalController, NavParams } from 'ionic-angular';
 
 @Component({
@@ -12,6 +13,10 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  defaultSettingButton() {
+    this.navCtrl.push(DefaultSettingPage);
   }
 
   addContactButton() {
