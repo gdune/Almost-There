@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Setting
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="ETA">
+    <ion-item>
+      <ion-label stacked float-left>ETA Default Message</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+  Send when
+  <ion-item>
+    <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  minutes away
+
+  </div>
+  <div class="Auto">
+    <ion-item>
+      <ion-label stacked>Auto-reply Default Message</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <button ion-button>
+      <ion-icon name="help-circle"></ion-icon>
+    </button>
+  </div>
+  <button ion-button float-left color="cancel">Cancel</button>
+  <button ion-button float-right color="affirm">Start</button>
+</ion-content>

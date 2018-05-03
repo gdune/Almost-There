@@ -8,14 +8,17 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SetupTripPage } from '../pages/setup-trip/setup-trip';
 import { AddContactPage } from '../pages/add-contact/add-contact';
+import { DefaultSettingPage } from '../pages/default-setting/default-setting';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+
     AddContactPage,
-    SetupTripPage
+    SetupTripPage,
+    DefaultSettingPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { AddContactPage } from '../pages/add-contact/add-contact';
     MyApp,
     SetupTripPage,
     AddContactPage,
-    HomePage
+    HomePage,
+    DefaultSettingPage
   ],
   providers: [
     StatusBar,

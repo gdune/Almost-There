@@ -6,42 +6,55 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <div class="destination">
-    <ion-item>
-      <ion-label stacked float-left>Destination</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <button ion-button>
-      <ion-icon name="help-circle"></ion-icon>
-    </button>
+  <div class="coupling">
+    <div class="field">
+      <ion-item float-left>
+        <ion-label stacked>Destination</ion-label>
+        <ion-input type="search"></ion-input>
+      </ion-item>
+    </div>
+    <div class="help">
+      <button ion-button float-left>
+        <ion-icon name="help-circle"></ion-icon>
+      </button>
+    </div>
   </div>
-  <div class="recipient">
-    <ion-item>
-      <ion-label stacked>Recipient</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <button ion-button>
-      <ion-icon name="help-circle"></ion-icon>
-    </button>
+  <div class="coupling">
+    <div class="field">
+      <ion-item>
+        <ion-label stacked>Recipient</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </div>
+    <div class="help">
+      <button ion-button>
+        <ion-icon name="help-circle"></ion-icon>
+      </button>
+    </div>
   </div>
-  <div class="message">
-  <ion-item>
-    <ion-label stacked>ETA Message</ion-label>
-    <ion-textarea type="text"></ion-textarea>
-  </ion-item>
-  <button ion-button>
-    <ion-icon name="help-circle"></ion-icon>
-  </button>
-</div>
+  <div class="coupling">
+    <div class="field">
+      <ion-item>
+        <ion-label stacked>ETA Message</ion-label>
+        <ion-textarea type="text"></ion-textarea>
+      </ion-item>
+    </div>
+    <div class="help">
+      <button ion-button>
+        <ion-icon name="help-circle"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  
   Send when
   <ion-item>
     <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
   </ion-item>
   minutes away
-  <button ion-button float-left color="cancel">Cancel</button>
+  <button ion-button float-left navPop color="cancel">Cancel</button>
   <button ion-button float-right color="affirm">Start</button>
 </ion-content>
-
 <!-- To Do (5/1)
  - Make ion-input and help-circle on same line
  - connect input to start button
