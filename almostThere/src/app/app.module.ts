@@ -14,8 +14,8 @@ import { AddContactPage } from '../pages/add-contact/add-contact';
   declarations: [
     MyApp,
     HomePage,
-    SetupTripPage,
-    AddContactPage
+    AddContactPage,
+    SetupTripPage
   ],
   imports: [
     BrowserModule,

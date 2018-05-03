@@ -9,12 +9,13 @@
 <ion-content padding>
 
   <div class="block-display">
-    <button ion-button large color="light" (click)="setupTripButton()">
-            New Trip</button>
-    <button ion-button large icon-start color="light">
+    <button ion-button large color="light" (click)="setupTripButton()" title="Start a New Trip">
+            New Trip
+    </button>
+    <button ion-button large icon-start color="light" title="Start a Trip Home">
             <ion-icon name="home"></ion-icon>Home
     </button>
-    <button ion-button large icon-start color="light">
+    <button ion-button large icon-start color="light" title="Start a Trip to Work">
             <ion-icon name="briefcase"></ion-icon>Work
     </button>
   </div>
@@ -22,20 +23,20 @@
   <ion-row>
   	<ion-col>
       <a href="http://ionicframework.com/docs/v2">
-    		<button ion-button icon-only float-left color="light">
+    		<button ion-button icon-only float-left color="light" title="Help/FAQ">
     			<ion-icon name="help"></ion-icon>
     		</button>
       </a>
   	</ion-col>
 
   	<ion-col class="center-bottom">
-  		<button ion-button icon-only color="light" (click)="addContactButton()">
+  		<button ion-button icon-only color="light" (click)="addContactButton()" title="Add Contact">
   			<ion-icon name="contact"></ion-icon><ion-icon name="add"></ion-icon>
   		</button>
   	</ion-col>
 
     <ion-col>
-  		<button ion-button icon-only float-right color="light">
+  		<button ion-button icon-only float-right color="light" title = "Settings">
   			<ion-icon name="cog"></ion-icon>
   		</button>
   	</ion-col>
