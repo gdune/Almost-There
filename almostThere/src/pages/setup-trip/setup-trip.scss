@@ -2,12 +2,9 @@ page-setup-trip {
 
 }
 
-ion-button {
-	float: right;
-}
-
 .field {
 	float: left;
+	width: 80%;
 }
 
 .help {
@@ -16,4 +13,13 @@ ion-button {
 
 .coupling {
 	clear: left;
+}
+
+.time {
+	float: left;
+	display: block;
+}
+
+#buttons {
+	
 }
