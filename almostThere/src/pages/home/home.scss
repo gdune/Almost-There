@@ -2,15 +2,23 @@ page-home {
 
 }
 
+.header{
+  margin-top:auto;
+  text-align:center;
+  font-size:30pt;
+  // color:white;
+}
 
 .block-display button{
-  margin-bottom:20%;
+  margin-top:10%;
+  margin-bottom:10%;
   margin-left: auto;
   margin-right: auto;
   display:block;
   text-align:center;
   width:67%;
-  color:#99e7ff;
+  background-color:#1976d2;
+  color:white;
 }
 
 .center-bottom button{
@@ -19,6 +27,11 @@ page-home {
   display:block;
 }
 
-.header ion-title{
-  text-align:center;
+.center {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:0%;
+  display:block;
+  width:50px;
+  // height:100px;
 }
