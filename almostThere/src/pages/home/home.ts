@@ -28,7 +28,7 @@ export class HomePage {
   	this.navCtrl.push(SetupTripPage);
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
   // Or to get a key/value pair
     this.storage.get('tripForm').then((val) => {
       var p = document.getElementById('tripSummary').getElementsByTagName("p");
