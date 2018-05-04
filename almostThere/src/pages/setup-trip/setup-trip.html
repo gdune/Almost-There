@@ -7,91 +7,27 @@
 </ion-header>
 <ion-content padding>
 
-<!-- <form [formGroup]="formgroup">
+<form [formGroup]="formgroup" (ngSubmit)="tripForm()">
+
   <ion-list>
     <ion-item>
-      <ion-label>
-        FirstName
-      </ion-label>
-      <ion-input type="text" formControlName="firstname"></ion-input>
+      <ion-label floating>Destination</ion-label>
+      <ion-input></ion-input>
     </ion-item>
-    <ion-item *ngIf="firstname.hasError('required') && firstname.touched">
-      <p> *FirstName is required</p>
+    <ion-item>        
+      <ion-label floating>Recipient</ion-label>
+      <ion-input></ion-input>
     </ion-item>
-    <ion-item>
-        <ion-label>
-          LastName
-        </ion-label>
-        <ion-input type="text" formControlName="lastname"></ion-input>
+    <ion-item>        
+      <ion-label floating>ETA Message</ion-label>
+      <ion-input></ion-input>
     </ion-item>
-    <ion-item *ngIf="lastname.hasError('required') && lastname.touched">
-        <p> *LastName is required</p>
-      </ion-item>
+    <ion-item text-align:center size="5">
+        <ion-label text-center>Send when X mins away:</ion-label>
+        <ion-input type="number" placeholder="X" formControlName="time"></ion-input>
+    </ion-item>
+
   </ion-list>
 
-  <button clear ion-button>Submit</button>
-</form> -->
-
-
-<form [formGroup]="formgroup" (ngSubmit)="tripForm()">
-  <ion-list>
-  <div class="coupling">
-    <div class="field">
-      <ion-item>
-        <ion-label stacked>Destination</ion-label>
-        <ion-input type="text" formControlName="destination"></ion-input>
-      </ion-item>
-    </div>
-    <div class="help">
-      <button ion-button small>
-        <ion-icon name="help-circle"></ion-icon>
-      </button>
-    </div>
-  </div>
-  <div class="coupling">
-    <div class="field">
-      <ion-item>
-        <ion-label stacked>Recipient</ion-label>
-        <ion-input type="text" formControlName="recipient"></ion-input>
-      </ion-item>
-    </div>
-    <div class="help">
-      <button ion-button small>
-        <ion-icon name="help-circle"></ion-icon>
-      </button>
-    </div>
-  </div>
-  <div class="coupling">
-    <div class="field">
-      <ion-item>
-        <ion-label stacked>ETA Message</ion-label>
-        <ion-textarea type="text" formControlName="etamessage"></ion-textarea>
-      </ion-item>
-    </div>
-    <div class="help">
-      <button ion-button small>
-        <ion-icon name="help-circle"></ion-icon>
-      </button>
-    </div>
-  </div>
-  <div class="time">
-    <ion-label>Send when</ion-label>
-    <ion-item>
-      <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="defaultTime" formControlName="time"></ion-datetime>
-    </ion-item>
-    <ion-label>minutes away</ion-label>
-  </div>
-
-  <div id="buttons">
-    <button ion-button float-left navPop color="cancel">Cancel</button>
-    <button ion-button type="submit" float-right color="affirm">Start</button>
-  </div>
-  
-</ion-list>
 </form>
-
 </ion-content>
-<!-- To Do (5/3)
- - make from submittable
- - make destination searchable
- -->
