@@ -14,7 +14,7 @@
     <ion-select>
       <ion-option>None</ion-option>
       <ion-option>I'm almost there! Arriving in a few minutes.</ion-option>
-      <ion-option>I'm almost there! Arriving in 10 minutes.</ion-option>
+      <ion-option selected = "true">I'm almost there! Arriving in 10 minutes.</ion-option>
       <ion-option>I'm almost there! Wait for me outside.</ion-option>
     </ion-select>
   </ion-item>
@@ -26,13 +26,13 @@
     </ion-item>
 
         <button ion-button>
-      <ion-icon name="help-circle"></ion-icon>
+      <ion-icon name="help-circle" ></ion-icon>
     </button>
 
 
   <ion-label stacked style="color:black"> Send when </ion-label>
   <ion-item>
-    <ion-datetime default = "10" displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate">
+    <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate" required default = "10">
     </ion-datetime>
   </ion-item>
    <ion-label stacked style="color:black"> minutes away</ion-label>
