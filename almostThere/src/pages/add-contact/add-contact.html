@@ -12,24 +12,30 @@
     New Contact
   </h1>
 	<div class="new-contact">
-		<ion-item>
-			<ion-label stacked>Name</ion-label>
-			<ion-input type="text"></ion-input>
-		</ion-item>
+		<form [formGroup] ="contacts" (ngSubmit) ="contactForm()" >
+			<ion-item>
+				<ion-label stacked>Name</ion-label>
+				<ion-input type="text" formControlName="name"></ion-input>
+			</ion-item>
 
-		<ion-item>
-			<ion-label stacked>Phone #:</ion-label>
-			<ion-input type="tel"></ion-input>
-		</ion-item>
+			<ion-item>
+				<ion-label stacked>Phone #:</ion-label>
+				<ion-input type="tel" formControlName="phone"></ion-input>
+			</ion-item>
 
-		<ion-item>
-			<ion-label stacked>Address</ion-label>
-			<ion-input type="text"></ion-input>
-		</ion-item>
+			<ion-item>
+				<ion-label stacked>Address</ion-label>
+				<ion-input type="text" formControlName="address"></ion-input>
+			</ion-item>
+
+			<button ion-button float-left color="danger" navPop>Cancel</button>
+  			<button ion-button float-right color="secondary" type="submit">Save</button>
+
+
+		</form>
+
 
 
 	</div>
-	<button ion-button float-left color="danger" navPop>Cancel</button>
-  	<button ion-button float-right color="secondary">Save</button>
 
 </ion-content>
