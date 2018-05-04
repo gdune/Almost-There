@@ -14,6 +14,7 @@ export class SetupTripPage {
 	recipient:AbstractControl;
 	etamessage:AbstractControl;
 	time:AbstractControl;
+	deafultTime;
 
 
   constructor(public navCtrl: NavController, 

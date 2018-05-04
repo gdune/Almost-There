@@ -1,3 +1,5 @@
+
+<!-- delete this comment, Geri -->
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -75,11 +77,11 @@
     </div>
   </div>
   <div class="time">
-    <p>Send when</p>
+    <ion-label>Send when</ion-label>
     <ion-item>
-      <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate" formControlName="time"></ion-datetime>
+      <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="defaultTime" formControlName="time"></ion-datetime>
     </ion-item>
-    <p>minutes away</p>
+    <ion-label>minutes away</ion-label>
   </div>
 
   <div id="buttons">

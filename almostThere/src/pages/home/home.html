@@ -18,12 +18,20 @@
     <button ion-button large color="light" (click)="setupTripButton()" title="Start a New Trip">
             New Trip
     </button>
-    <button ion-button large icon-start color="light" title="Start a Trip Home">
+    <button ion-button large icon-start color="light" title="Start a Trip Home" (click)="retreiveTrip()">
             <ion-icon name="home"></ion-icon>Home
     </button>
     <button ion-button large icon-start color="light" title="Start a Trip to Work">
             <ion-icon name="briefcase"></ion-icon>Work
     </button>
+  </div>
+
+  <div id="tripSummary">
+    <h1>Current Trips</h1>
+    <p></p>
+
+    <p></p>
+
   </div>
 
   <ion-row style="margin-top: 35%; position:relative;">
