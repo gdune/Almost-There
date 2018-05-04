@@ -1,33 +1,64 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Setting
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content padding>
-  <div class="ETA">
+  <div class="destination">
+
     <ion-item>
-      <ion-label stacked float-left>ETA Default Message</ion-label>
-      <ion-input type="text"></ion-input>
+    <ion-label>Default Message Option(s)</ion-label>
+    <ion-select>
+      <ion-option>None</ion-option>
+      <ion-option>I'm almost there! Arriving in a few minutes.</ion-option>
+      <ion-option>I'm almost there! Arriving in 10 minutes.</ion-option>
+      <ion-option>I'm almost there! Wait for me outside.</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+    <ion-item>
+      <ion-label stacked float-left style="color:black">ETA custom Message</ion-label>
+      <ion-input type="text" placeholder= "Please select None to custom your own Message"></ion-input>
     </ion-item>
 
-  Send when
+        <button ion-button>
+      <ion-icon name="help-circle"></ion-icon>
+    </button>
+
+
+  <ion-label stacked style="color:black"> Send when </ion-label>
   <ion-item>
-    <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate"></ion-datetime>
+    <ion-datetime default = "10" displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate">
+    </ion-datetime>
   </ion-item>
-  minutes away
+   <ion-label stacked style="color:black"> minutes away</ion-label>
 
   </div>
   <div class="Auto">
+
+        <ion-list>
+  <ion-item>
+    <ion-label>Auto-reply Default Message</ion-label>
+    <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+  </ion-item>
+</ion-list>
     <ion-item>
-      <ion-label stacked>Auto-reply Default Message</ion-label>
-      <ion-input type="text"></ion-input>
+
+      <ion-input type="text" value = " I'm driving with Almost There. I will get back to you when I arrive."></ion-input>
     </ion-item>
+
+
     <button ion-button>
       <ion-icon name="help-circle"></ion-icon>
     </button>
   </div>
+  <div>
+  </div>
+
   <button ion-button float-left color="cancel">Cancel</button>
-  <button ion-button float-right color="affirm">Start</button>
+  <button ion-button float-right color="affirm">Save</button>
 </ion-content>
