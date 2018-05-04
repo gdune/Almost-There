@@ -30,12 +30,15 @@ export class HomePage {
 
   ionViewDidEnter() {
   // Or to get a key/value pair
-    this.storage.get('tripForm').then((val) => {
+    this.storage.get('tripForm')
+    .then((val) => {
       var p = document.getElementById('tripSummary').getElementsByTagName("p");
       var i;
-      console.log(val);
       p[0].innerHTML = "Message will be sent to " + val.recipient + " when you are " + val.time + " minutes from " + val.destination;
       p[1].innerHTML = "Message: " + val.etamessage;
+    })
+    .catch(e => {
+      
     });
   }
 
