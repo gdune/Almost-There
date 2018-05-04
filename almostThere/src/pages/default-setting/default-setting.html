@@ -25,17 +25,20 @@
       <ion-input type="text" placeholder= "Please select None to custom your own Message"></ion-input>
     </ion-item>
 
-        <button ion-button>
+        <!-- <button ion-button>
       <ion-icon name="help-circle" ></ion-icon>
-    </button>
+    </button> -->
 
 
-  <ion-label stacked style="color:black"> Send when </ion-label>
-  <ion-item>
-    <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate" required default = "10">
-    </ion-datetime>
-  </ion-item>
-   <ion-label stacked style="color:black"> minutes away</ion-label>
+  <div>
+    <ion-label stacked style="color:black" width="30%"> Send when </ion-label>
+    <ion-item width="30%">
+      <!-- <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="myDate" required default = "10">
+      </ion-datetime> -->
+        <input type="number" [(ngModel)]="myDate" />
+    </ion-item>
+     <ion-label stacked style="color:black" width="30%"> minutes away</ion-label>
+ </div>
 
   </div>
   <div class="Auto">
@@ -52,9 +55,9 @@
     </ion-item>
 
 
-    <button ion-button>
+    <!-- <button ion-button>
       <ion-icon name="help-circle"></ion-icon>
-    </button>
+    </button> -->
   </div>
   <div>
   </div>
