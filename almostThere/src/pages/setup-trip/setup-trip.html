@@ -7,8 +7,9 @@
 </ion-header>
 <ion-content padding>
 
-<form [formGroup]="formgroup" (ngSubmit)="tripForm()">
+<!-- See bottom of page for Eric comment, which was originally here-->
 
+<form [formGroup]="formgroup" (ngSubmit)="tripForm()">
   <ion-list>
     <ion-item>
       <ion-label floating>Destination</ion-label>
@@ -23,11 +24,39 @@
       <ion-input></ion-input>
     </ion-item>
     <ion-item text-align:center size="5">
-        <ion-label text-center>Send when X mins away:</ion-label>
-        <ion-input type="number" placeholder="X" formControlName="time"></ion-input>
+      <ion-label text-center>Send when X mins away:</ion-label>
+      <ion-input type="number" placeholder="X" formControlName="time"></ion-input>
     </ion-item>
-
   </ion-list>
-
+  <div id="buttons">
+    <button ion-button float-left navPop color="cancel">Cancel</button>
+    <button ion-button type="submit" float-right color="affirm">Start</button>
+  </div>
 </form>
 </ion-content>
+
+
+<!-- Eric's Comment:
+<form [formGroup]="formgroup">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        FirstName
+      </ion-label>
+      <ion-input type="text" formControlName="firstname"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="firstname.hasError('required') && firstname.touched">
+      <p> *FirstName is required</p>
+    </ion-item>
+    <ion-item>
+        <ion-label>
+          LastName
+        </ion-label>
+        <ion-input type="text" formControlName="lastname"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="lastname.hasError('required') && lastname.touched">
+        <p> *LastName is required</p>
+      </ion-item>
+  </ion-list>
+  <button clear ion-button>Submit</button>
+</form> -->
