@@ -28,6 +28,10 @@ export class HomePage {
   	this.navCtrl.push(SetupTripPage);
   }
 
+  retreiveTrip() {
+    console.log("function called");
+  }
+
   ionViewDidEnter() {
   // Or to get a key/value pair
     this.storage.get('tripForm')
@@ -38,7 +42,7 @@ export class HomePage {
       p[1].innerHTML = "Message: " + val.etamessage;
     })
     .catch(e => {
-      
+
     });
   }
 

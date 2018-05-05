@@ -28,10 +28,16 @@
       <ion-input type="number" placeholder="X" formControlName="time"></ion-input>
     </ion-item>
   </ion-list>
-  <div id="buttons">
-    <button ion-button float-left navPop color="cancel">Cancel</button>
-    <button ion-button type="submit" float-right color="affirm">Start</button>
-  </div>
+
+  <ion-row style="margin-top:60%; position:relative;">
+    <ion-col>
+      <button ion-button large float-left navPop color="cancel">Cancel</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button large type="submit" float-right color="affirm">Start</button>
+    </ion-col>
+  </ion-row>
+
 </form>
 </ion-content>
 
@@ -62,7 +68,7 @@
 </form> -->
 
 
-<form [formGroup]="formgroup" (ngSubmit)="tripForm()">
+<!-- <form [formGroup]="formgroup" (ngSubmit)="tripForm()">
   <ion-list>
   <div class="coupling">
     <div class="field">
@@ -117,9 +123,9 @@
   </div>
 
 </ion-list>
-</form>
+</form> -->
 
-</ion-content>
+<!-- </ion-content> -->
 <!-- To Do (5/3)
  - make from submittable
  - make destination searchable
