@@ -14,4 +14,4 @@ To run:
 
 5. The app should pop up in your browser at "http://localhost:8100"
 
-6. To see the app in a mobile formate (which we recommend), change the URL to "http://localhost:8100/ionic-lab"
+6. To see the app in a mobile format (which we recommend), change the URL to "http://localhost:8100/ionic-lab"
