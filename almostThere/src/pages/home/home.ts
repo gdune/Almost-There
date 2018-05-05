@@ -42,6 +42,7 @@ export class HomePage {
       p[1].innerHTML = "Message: " + val.etamessage + " Arriving in " + val.time + " minutes.";
     })
     .catch(e => {
+      var p = document.getElementById('tripSummary').getElementsByTagName("p");
       p[0].innerHTML = "No current trip"
     });
   }
