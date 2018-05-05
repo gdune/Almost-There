@@ -4,11 +4,11 @@ High-fidelity prototype for CMSC434 Spring 2018.
 
 To run:
 
-1. Clone this repository
+1. Dowload Ionic onto your computer (see this link for details: https://ionicframework.com/docs/intro/installation/)
 
-2. Make sure you have correctly installed Ionic.
+2. Clone this repository
 
-3. cd into the repository.
+3. cd into the repository that you just cloned
 
 4. Run the following command: "ionic serve"
 
