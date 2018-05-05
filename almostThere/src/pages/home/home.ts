@@ -39,10 +39,10 @@ export class HomePage {
       var p = document.getElementById('tripSummary').getElementsByTagName("p");
       var i;
       p[0].innerHTML = "Message will be sent to " + val.recipient + " when you are " + val.time + " minutes from " + val.destination;
-      p[1].innerHTML = "Message: " + val.etamessage;
+      p[1].innerHTML = "Message: " + val.etamessage + " Arriving in " + val.time + " minutes.";
     })
     .catch(e => {
-
+      p[0].innerHTML = "No current trip"
     });
   }
 

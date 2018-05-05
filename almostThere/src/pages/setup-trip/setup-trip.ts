@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Storage } from '@ionic/storage';
+import { AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-setup-trip',
@@ -14,10 +16,9 @@ export class SetupTripPage {
 	recipient:AbstractControl;
 	etamessage:AbstractControl;
 	time:AbstractControl;
-	deafultTime;
 
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController,
   	public formBuilder: FormBuilder, private storage: Storage) {
 
   		this.formgroup = formBuilder.group({
@@ -36,6 +37,7 @@ export class SetupTripPage {
   tripForm(){
      // set a key/value
   	this.storage.set('tripForm', this.formgroup.value);
+  	this.navCtrl.pop();
   }
 
 }

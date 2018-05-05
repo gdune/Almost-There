@@ -13,19 +13,19 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Destination</ion-label>
-      <ion-input></ion-input>
+      <ion-input type="text" formControlName="destination"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Recipient</ion-label>
-      <ion-input></ion-input>
+      <ion-input type="text" formControlName="recipient"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>ETA Message</ion-label>
-      <ion-input></ion-input>
+      <ion-textarea type="text" formControlName="etamessage"></ion-textarea>
     </ion-item>
     <ion-item text-align:center size="5">
       <ion-label text-center>Send when X mins away:</ion-label>
-      <ion-input type="number" placeholder="X" formControlName="time"></ion-input>
+      <ion-input type="number" placeholder="X" min="1" max="50" formControlName="time"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -34,7 +34,7 @@
       <button ion-button large float-left navPop color="cancel">Cancel</button>
     </ion-col>
     <ion-col>
-      <button ion-button large type="submit" float-right color="affirm">Start</button>
+      <button ion-button large type="submit" [disabled]="!formgroup.valid" float-right color="affirm">Start</button>
     </ion-col>
   </ion-row>
 
@@ -127,6 +127,5 @@
 
 <!-- </ion-content> -->
 <!-- To Do (5/3)
- - make from submittable
  - make destination searchable
  -->

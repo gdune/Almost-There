@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -9,7 +11,8 @@ import { HomePage } from '../home/home';
 })
 export class DefaultSettingPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, 
+  	public formBuilder: FormBuilder, private storage: Storage) {
 
   }
 
