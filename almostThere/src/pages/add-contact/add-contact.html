@@ -30,10 +30,10 @@
 
       <ion-row style="margin-top:70%; position:relative;">
         <ion-col>
-          <button ion-button large float-left color="cancel" navPop>Cancel</button>
+          <button ion-button large float-left color="cancel" navPop (click)="cancelContact()">Cancel</button>
         </ion-col>
         <ion-col>
-          <button ion-button large float-right color="affirm" type="submit">Save</button>
+          <button ion-button large float-right color="affirm" type="submit" (click)="saveContact()">Save</button>
         </ion-col>
       </ion-row>
 
